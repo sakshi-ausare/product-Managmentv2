@@ -1,0 +1,51 @@
+
+.search-input {
+  width: 400px;
+  margin: 20px 0;
+}
+.search-input input {
+  width: 100%;
+  padding: 8px; /* Slightly increased padding so text isn't cramped */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: transparent;
+  color: white
+}
+.search-input input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  height: 260px;
+}
+
+.card img {
+  width: 180px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+
+}
+
+.card h3 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 16px;
+}
