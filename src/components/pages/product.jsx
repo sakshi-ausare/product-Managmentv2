@@ -10,7 +10,7 @@ function Product() {
     queryKey: ['post'],
 
     queryFn: () =>
-      fetch(`https://dummyjson.com/products/?limit=100`)
+      fetch(`https://dummyjson.com/products`)
         .then((res) => res.json())
      
   })

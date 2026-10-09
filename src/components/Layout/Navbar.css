@@ -37,3 +37,41 @@
     padding: 0;
     list-style: none;
 }
+.theme-switch {
+  width: 50px;
+  height: 26px;
+  background: #ccc;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.switch-off,
+.switch-on {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch-on {
+  transform: translateX(24px);
+  background: white;
+}
+
+.theme-switch:has(.switch-on) {
+  background: #2196f3;
+}
+.navbar.dark {
+  background-color: white;
+  color: black;
+}
+
+.navbar.light {
+  background-color: black;
+  color: white;
+}
+

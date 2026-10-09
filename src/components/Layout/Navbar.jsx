@@ -1,11 +1,16 @@
-import React from 'react'
+import React,{useContext}from 'react'
 import './Navbar.css';
 import {NavLink} from 'react-router-dom';
+import ThemeContext from'./theme.jsx';
+
 
 function Navbar() {
+    const { darkMode, toggleTheme } = useContext(ThemeContext);
+
   return (
    <>
-    <nav className="navbar">
+    
+    <nav className={`navbar ${darkMode ? "dark" : "light"}`}> 
 
     <div className="navbar-title">
 
@@ -23,10 +28,19 @@ function Navbar() {
         <NavLink  to="/add" className="add-btn">Add Product</NavLink>
         </li>
 
+        <li>
+       <button className="theme-switch" onClick={toggleTheme}>
+       <span className={darkMode ? "switch-on" : "switch-off"}></span>
+      </button>
+        
+
+        </li>
+
 
     </ul>
 
 </nav>
+
 
    </>
   )
