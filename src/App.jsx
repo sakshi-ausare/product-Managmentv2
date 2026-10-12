@@ -10,14 +10,15 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 function App() {
    
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
     {
       path: '/',
       element: <MainLayout />,
 
       children: [
         {
-          path: 'product',
+          index: true,
           element: <Product />,
         },
         {
@@ -30,7 +31,11 @@ function App() {
         },
       ],
     },
-  ])
+  ],
+   {
+    basename: '/product-Managmentv2',
+  }
+)
 
   const queryClient = new QueryClient()
 
