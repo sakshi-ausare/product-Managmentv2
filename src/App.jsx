@@ -21,6 +21,10 @@ function App() {
           index: true,
           element: <Product />,
         },
+         {
+          path:'product',
+          element: <Product />,
+        },
         {
           path: 'product/:id',
           element: <Productdetail />,
